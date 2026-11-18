@@ -51,6 +51,11 @@ so a lock file stays valid for good. Warnings of `advisories.json` are shown
 by `rig stack sync` and `rig stack plan`; a blocked version fails with its
 reason.
 
+A stack listed here is installed by its name (`rig stack plan acme/data
+-version "~> 1.2" -f my.vars.hcl`) or taken as a part of a local stack
+(`stack "data" { source = "acme/data", version = "~> 1.2" }`); its entry
+lists the modules its lock file pins, all of them listed here too.
+
 `RIG_GLOBAL_REGISTRY` points Rig to another registry of this shape: a git
 address, or a directory such as a checkout of this repository.
 
@@ -63,7 +68,9 @@ address, or a directory such as a checkout of this repository.
 2. Publish versions in your repository: `rig module publish <dir> -key
    name.key` validates the module, signs its tree digest, commits the
    signature and tags the version (`<name>/v<version>`, or `v<version>`
-   for a repository of one module). Push the tag.
+   for a repository of one module); `rig stack publish <dir> -key
+   name.key` does the same for a stack with `metadata.hcl` and its lock
+   file. Push the tag.
 3. The *Update* workflow lists every new tag of your repositories once it
    passes the checks: the module validates, its metadata names the tag's
    name and version, a key of your namespace signs it, it is not blocked.
