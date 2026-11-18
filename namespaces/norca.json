@@ -1,0 +1,10 @@
+{
+  "name": "norca",
+  "owner": "bacanoo-io",
+  "repositories": [
+    {
+      "url": "github.com/bacanoo-io/norca-rig-registry",
+      "layout": "registry"
+    }
+  ]
+}

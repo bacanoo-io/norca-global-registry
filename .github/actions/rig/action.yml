@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2026 Norca contributors
+# SPDX-License-Identifier: MPL-2.0
+#
+# Builds the rig program into $RUNNER_TEMP/rig. Rig and Norca have no
+# published release yet, so it is built from their sources: the rig program
+# builds against the norca checkout next to it (cli/go.mod). Switch to a
+# release download once Rig publishes binaries.
+#
+# actions/setup-go is pinned by commit: v7.0.0.
+name: Build rig
+description: Build the rig program from its sources.
+
+inputs:
+  rig-source:
+    description: The git repository of Rig.
+    default: https://github.com/bacanoo-io/norca-rig
+  rig-ref:
+    description: The branch or tag of Rig.
+    default: main
+  norca-source:
+    description: The git repository of Norca.
+    default: https://github.com/bacanoo-io/norca
+  norca-ref:
+    description: The branch or tag of Norca.
+    default: main
+
+runs:
+  using: composite
+  steps:
+    - name: Check out Rig and Norca
+      shell: bash
+      env:
+        RIG_SOURCE: ${{ inputs.rig-source }}
+        RIG_REF: ${{ inputs.rig-ref }}
+        NORCA_SOURCE: ${{ inputs.norca-source }}
+        NORCA_REF: ${{ inputs.norca-ref }}
+      run: |
+        mkdir -p "$RUNNER_TEMP/src"
+        git clone --depth 1 --branch "$RIG_REF" "$RIG_SOURCE" "$RUNNER_TEMP/src/norca-rig"
+        git clone --depth 1 --branch "$NORCA_REF" "$NORCA_SOURCE" "$RUNNER_TEMP/src/norca"
+
+    - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+      with:
+        go-version-file: ${{ runner.temp }}/src/norca-rig/cli/go.mod
+        cache-dependency-path: ${{ runner.temp }}/src/norca-rig/cli/go.sum
+
+    - name: Build rig
+      shell: bash
+      working-directory: ${{ runner.temp }}/src/norca-rig/cli
+      run: |
+        go build -o "$RUNNER_TEMP/rig" ./cmd/rig
+        "$RUNNER_TEMP/rig" version

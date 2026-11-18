@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2026 Norca contributors
+# SPDX-License-Identifier: MPL-2.0
+#
+# Checks the registry with rig index check: every file in its format, every
+# key parses, and that a change only adds (POLICY.md): no listed version or
+# advisory is changed or removed. Every version a change adds is checked
+# against its source: the tag points to the listed commit, the tree digest
+# matches, a key of the namespace signs it, the module validates.
+#
+# actions/checkout is pinned by commit: v7.0.1.
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    # Once a week every listed version is checked against its source, so
+    # that a moved tag or a deleted repository is seen.
+    - cron: '41 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check:
+    name: Index
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: registry
+          fetch-depth: 0
+
+      - uses: ./registry/.github/actions/rig
+
+      - name: Check the registry
+        working-directory: registry
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          base=""
+          case "$EVENT" in
+            pull_request) base="$PR_BASE" ;;
+            push) [ "$PUSH_BEFORE" != "0000000000000000000000000000000000000000" ] && base="$PUSH_BEFORE" ;;
+          esac
+          if [ -n "$base" ]; then
+            "$RUNNER_TEMP/rig" index check -dir . -base "$base"
+          else
+            "$RUNNER_TEMP/rig" index check -dir .
+          fi

@@ -1,0 +1,9 @@
+version = 1
+
+# The entries, namespaces, keys and advisories are JSON and PEM files that
+# can't carry SPDX headers; they and the documentation are MPL 2.0.
+[[annotations]]
+path = ["**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Norca contributors"
+SPDX-License-Identifier = "MPL-2.0"

@@ -1,0 +1,39 @@
+name: Report a version
+description: Ask for a warning on a listed version, or for it to be blocked.
+title: "Advisory: "
+labels: ["advisory"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A warning is shown by rig stack sync and plan and changes nothing
+        else. A block keeps a version out and fails every lock file that
+        names it; it is only for the four cases of POLICY.md, with evidence,
+        and needs a recorded decision. A small bug or a mistake is answered
+        by a new version, not by a block.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: kind (module or stack), namespace/name and version.
+      placeholder: module acme/redis 1.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: What is asked
+      options:
+        - A warning
+        - Blocking - malicious code or a supply chain compromise
+        - Blocking - exposed secrets
+        - Blocking - a compromised signing key
+        - Blocking - a legal requirement
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reason and evidence
+    validations:
+      required: true

@@ -1,0 +1,3 @@
+# Namespaces, keys and repositories are added by the maintainers of the
+# registry after a review, not by direct pull requests (POLICY.md).
+blank_issues_enabled: false

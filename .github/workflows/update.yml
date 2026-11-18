@@ -1,0 +1,72 @@
+# SPDX-FileCopyrightText: 2026 Norca contributors
+# SPDX-License-Identifier: MPL-2.0
+#
+# Lists the versions the repositories of the namespaces have tagged since
+# the last run (rig index update): each one signed by a key of its
+# namespace, validated, with its tree digest, and not blocked. A listed
+# version is never touched. The result is checked as a pull request is
+# (rig index check against the commit it starts from) and committed to
+# main; a tag that fails a check stays out and is shown in the summary.
+#
+# actions/checkout is pinned by commit: v7.0.1.
+name: Update
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      namespace:
+        description: Update only this namespace (empty for all).
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  update:
+    name: Entries
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: registry
+
+      - uses: ./registry/.github/actions/rig
+
+      - name: Update the entries
+        working-directory: registry
+        env:
+          NAMESPACE: ${{ inputs.namespace }}
+        run: |
+          args=()
+          [ -n "$NAMESPACE" ] && args=(-namespace "$NAMESPACE")
+          "$RUNNER_TEMP/rig" index update -dir . "${args[@]}" | tee "$RUNNER_TEMP/outcomes.txt"
+          {
+            echo '## Outcomes'
+            echo '```'
+            cat "$RUNNER_TEMP/outcomes.txt"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Check and commit
+        working-directory: registry
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "nothing new"
+            exit 0
+          fi
+          git add -A
+          git -c user.name='norca-registry-bot' -c user.email='norca-registry-bot@users.noreply.github.com' \
+            commit -q -s -m "index: list new versions" -m "$(grep '^listed ' "$RUNNER_TEMP/outcomes.txt")"
+          "$RUNNER_TEMP/rig" index check -dir . -base HEAD~1
+          git push origin HEAD:main

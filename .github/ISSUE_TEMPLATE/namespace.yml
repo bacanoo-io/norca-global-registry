@@ -1,0 +1,56 @@
+name: Request a namespace
+description: List the modules and stacks of your repositories in the global registry.
+title: "Namespace: "
+labels: ["namespace"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A namespace belongs to the user or organization that owns its source
+        repositories. Once it is added, the versions you tag and sign are
+        listed by the update workflow; nothing else needs a request. Read
+        POLICY.md first: a listed version is never changed or removed.
+  - type: input
+    id: namespace
+    attributes:
+      label: Namespace
+      description: Lower case letters, digits and dashes, at most 63 characters. Modules are addressed as <namespace>/<name>.
+      placeholder: acme
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: The GitHub user or organization that owns the repositories.
+      placeholder: acme
+    validations:
+      required: true
+  - type: textarea
+    id: repositories
+    attributes:
+      label: Repositories
+      description: |
+        One per line: the address and its layout. "registry": modules in
+        modules/<name>, tags <name>/v<version>. "module": one module at the
+        root, tags v<version>.
+      placeholder: |
+        github.com/acme/rig-modules registry
+        github.com/acme/redis module
+    validations:
+      required: true
+  - type: textarea
+    id: keys
+    attributes:
+      label: Public keys
+      description: The public keys your versions are signed with (rig key generate writes name.pub). Never the private key.
+      render: text
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Policy
+      options:
+        - label: I own these repositories and have read POLICY.md.
+          required: true
