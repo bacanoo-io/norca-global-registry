@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        A warning is shown by rig stack sync and plan and changes nothing
+        A warning is shown by rigger stack sync and plan and changes nothing
         else. A block keeps a version out and fails every lock file that
         names it; it is only for the four cases of POLICY.md, with evidence,
         and needs a recorded decision. A small bug or a mistake is answered

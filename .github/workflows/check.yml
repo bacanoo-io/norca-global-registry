@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Norca contributors
 # SPDX-License-Identifier: MPL-2.0
 #
-# Checks the registry with rig index check: every file in its format, every
+# Checks the registry with rigger index check: every file in its format, every
 # key parses, and that a change only adds (POLICY.md): no listed version or
 # advisory is changed or removed. Every version a change adds is checked
 # against its source: the tag points to the listed commit, the tree digest
@@ -42,7 +42,7 @@ jobs:
           path: registry
           fetch-depth: 0
 
-      - uses: ./registry/.github/actions/rig
+      - uses: ./registry/.github/actions/rigger
 
       - name: Check the registry
         working-directory: registry
@@ -57,7 +57,7 @@ jobs:
             push) [ "$PUSH_BEFORE" != "0000000000000000000000000000000000000000" ] && base="$PUSH_BEFORE" ;;
           esac
           if [ -n "$base" ]; then
-            "$RUNNER_TEMP/rig" index check -dir . -base "$base"
+            "$RUNNER_TEMP/rigger" index check -dir . -base "$base"
           else
-            "$RUNNER_TEMP/rig" index check -dir .
+            "$RUNNER_TEMP/rigger" index check -dir .
           fi

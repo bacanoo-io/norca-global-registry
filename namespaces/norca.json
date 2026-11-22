@@ -3,7 +3,7 @@
   "owner": "bacanoo-io",
   "repositories": [
     {
-      "url": "github.com/bacanoo-io/norca-rig-registry",
+      "url": "github.com/bacanoo-io/norca-registry",
       "layout": "registry"
     }
   ]

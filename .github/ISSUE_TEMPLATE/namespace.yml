@@ -35,7 +35,7 @@ body:
         modules/<name>, tags <name>/v<version>. "module": one module at the
         root, tags v<version>.
       placeholder: |
-        github.com/acme/rig-modules registry
+        github.com/acme/rigger-modules registry
         github.com/acme/redis module
     validations:
       required: true
@@ -43,7 +43,7 @@ body:
     id: keys
     attributes:
       label: Public keys
-      description: The public keys your versions are signed with (rig key generate writes name.pub). Never the private key.
+      description: The public keys your versions are signed with (rigger key generate writes name.pub). Never the private key.
       render: text
     validations:
       required: true

@@ -1,6 +1,6 @@
 # Policy
 
-The rules of the registry, as the design of Rig sets them (section 7.3)
+The rules of the registry, as the design of Rigger sets them (section 7.3)
 after the policy of the OpenTofu registry.
 
 ## Listed versions are never changed
@@ -35,7 +35,7 @@ change of mind.
 
 `advisories.json` lists warnings and blocks: kind, namespace, name, version,
 level (`warning` or `blocked`), reason, and for a block the decision. A
-warning is shown by `rig stack sync` and `plan` and changes nothing else.
+warning is shown by `rigger stack sync` and `plan` and changes nothing else.
 Advisories are added, never taken back.
 
 ## Namespaces and keys

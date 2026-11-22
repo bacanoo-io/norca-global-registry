@@ -2,10 +2,10 @@
 # SPDX-License-Identifier: MPL-2.0
 #
 # Lists the versions the repositories of the namespaces have tagged since
-# the last run (rig index update): each one signed by a key of its
+# the last run (rigger index update): each one signed by a key of its
 # namespace, validated, with its tree digest, and not blocked. A listed
 # version is never touched. The result is checked as a pull request is
-# (rig index check against the commit it starts from) and committed to
+# (rigger index check against the commit it starts from) and committed to
 # main; a tag that fails a check stays out and is shown in the summary.
 #
 # actions/checkout is pinned by commit: v7.0.1.
@@ -41,7 +41,7 @@ jobs:
         with:
           path: registry
 
-      - uses: ./registry/.github/actions/rig
+      - uses: ./registry/.github/actions/rigger
 
       - name: Update the entries
         working-directory: registry
@@ -50,7 +50,7 @@ jobs:
         run: |
           args=()
           [ -n "$NAMESPACE" ] && args=(-namespace "$NAMESPACE")
-          "$RUNNER_TEMP/rig" index update -dir . "${args[@]}" | tee "$RUNNER_TEMP/outcomes.txt"
+          "$RUNNER_TEMP/rigger" index update -dir . "${args[@]}" | tee "$RUNNER_TEMP/outcomes.txt"
           {
             echo '## Outcomes'
             echo '```'
@@ -68,5 +68,5 @@ jobs:
           git add -A
           git -c user.name='norca-registry-bot' -c user.email='norca-registry-bot@users.noreply.github.com' \
             commit -q -s -m "index: list new versions" -m "$(grep '^listed ' "$RUNNER_TEMP/outcomes.txt")"
-          "$RUNNER_TEMP/rig" index check -dir . -base HEAD~1
+          "$RUNNER_TEMP/rigger" index check -dir . -base HEAD~1
           git push origin HEAD:main

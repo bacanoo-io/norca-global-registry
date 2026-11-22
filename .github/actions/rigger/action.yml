@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2026 Norca contributors
+# SPDX-License-Identifier: MPL-2.0
+#
+# Builds the rigger program into $RUNNER_TEMP/rigger. Rigger is part of the
+# norca repository (rigger/, the program in rigger/cli) and has no published
+# release yet, so it is built from the sources of norca: rigger/cli builds
+# against the norca modules beside it (replace lines in rigger/cli/go.mod).
+# Switch to a release download once Rigger publishes binaries.
+#
+# actions/setup-go is pinned by commit: v7.0.0.
+name: Build rigger
+description: Build the rigger program from the sources of norca.
+
+inputs:
+  norca-source:
+    description: The git repository of Norca, with Rigger in rigger/.
+    default: https://github.com/bacanoo-io/norca
+  norca-ref:
+    description: The branch or tag of Norca.
+    default: main
+
+runs:
+  using: composite
+  steps:
+    - name: Check out Norca
+      shell: bash
+      env:
+        NORCA_SOURCE: ${{ inputs.norca-source }}
+        NORCA_REF: ${{ inputs.norca-ref }}
+      run: |
+        mkdir -p "$RUNNER_TEMP/src"
+        git clone --depth 1 --branch "$NORCA_REF" "$NORCA_SOURCE" "$RUNNER_TEMP/src/norca"
+
+    - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+      with:
+        go-version-file: ${{ runner.temp }}/src/norca/rigger/cli/go.mod
+        cache-dependency-path: ${{ runner.temp }}/src/norca/rigger/cli/go.sum
+
+    - name: Build rigger
+      shell: bash
+      working-directory: ${{ runner.temp }}/src/norca/rigger/cli
+      env:
+        GOWORK: "off"
+      run: |
+        go build -o "$RUNNER_TEMP/rigger" ./cmd/rigger
+        "$RUNNER_TEMP/rigger" version
