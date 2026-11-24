@@ -98,9 +98,9 @@ name the URL).
 
 `norca` holds the official modules, from
 [norca-registry](https://github.com/bacanoo-io/norca-registry). Its
-signing key is made by the maintainers (`rigger key generate -out norca`); the
-public half goes into `keys/norca/norca.pub`, the private half never into a
-repository. Until then no version of `norca` is listed.
+signing key is made by the maintainers (`rigger key generate -out norca`): the
+public half is `keys/norca/norca.pub`, the private half is never in a
+repository. A version of `norca` is listed once that key signs it.
 
 ## License
 
