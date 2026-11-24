@@ -1,0 +1,29 @@
+{
+  "namespace": "norca",
+  "name": "nodescaler-operator",
+  "versions": [
+    {
+      "version": "0.11.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/nodescaler-operator",
+      "tag": "nodescaler-operator/v0.11.0",
+      "commit": "e83490b7bf0a8cad34ec359a22dbe82edd1e25ba",
+      "digest": "sha256:4b996f629bfe85c27249026bbd1bf5c6e5d2a0a8cb9826dd77553c56f24c5c3f",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEYCIQD9/KNAstjUSrnCDbKl7Hr+RM+CT8zuIzsA4DtMrmSlHwIhAKrMIbbagcLBWt6ZAXe2JWiYnepQM605dpuR9KXbyccj"
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "custom-objects"
+        ]
+      },
+      "description": "The node scaling operator of Norca (norca-nodescaler of norca-platform) as one release: the ACL policy bound to its job and the job, two instances on different nodes, never on a node the operator created. The kinds NodeGroup and NodeProvider are registered by the core.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

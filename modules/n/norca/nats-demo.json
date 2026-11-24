@@ -1,0 +1,38 @@
+{
+  "namespace": "norca",
+  "name": "nats-demo",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/nats-demo",
+      "tag": "nats-demo/v1.0.0",
+      "commit": "963a8c8db7d3da3022b0e330317c675f9986f088",
+      "digest": "sha256:5c7814a9250fb6ed4538d69979e79833434fc6b2d3ca07bc2fde5b9bea8b2ada",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIQCsmIIJrEFodf1GG8vqtlFqgg/DooQfPacbKtLd9YyL+gIgQTnD0qlefpu5waLW9/GuT6ibi2bK+LKtrT+n3yRw8MA="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "secret-store"
+        ]
+      },
+      "icon": "sha256:e51387f59d4e1a36e65cf1984040ec2a68773ed736990471c48bd7a71af5b3d5",
+      "description": "A NATS cluster per region for the applications: JetStream, users in accounts, TLS, and optionally the changes of the Norca region as a leaf node of the system bus.",
+      "category": "messaging",
+      "keywords": [
+        "nats",
+        "jetstream",
+        "messaging",
+        "cdc"
+      ],
+      "license": "Apache-2.0",
+      "listed": "2026-11-24"
+    }
+  ]
+}

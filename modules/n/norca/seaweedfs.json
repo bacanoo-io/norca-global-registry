@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "seaweedfs",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/seaweedfs",
+      "tag": "seaweedfs/v0.1.0",
+      "commit": "b9e27b0755c131ae3efcfef7c57cc4162aabf3c6",
+      "digest": "sha256:9937329e26646b776087ce16b2ed49d3cffa60f16a40ced7505656bd4d84ae4a",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIBVjc78i++cLTq3Qx7xDipCawsNKIm0as3kginp8zx9eAiEAlF4OdCVqT8by9oW+L6poq7vA22UeedXdpiiVCW3xXV4="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "A single SeaweedFS server (Apache-2.0, release archive referenced, never shipped): master, volume server and filer in one weed process with raw_exec, data in a directory of the node, the master, volume and filer in the native catalog. The storage of the seaweedfs-csi pack.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

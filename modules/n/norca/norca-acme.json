@@ -1,0 +1,29 @@
+{
+  "namespace": "norca",
+  "name": "norca-acme",
+  "versions": [
+    {
+      "version": "0.3.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/norca-acme",
+      "tag": "norca-acme/v0.3.0",
+      "commit": "5a309416233a7db1c06fd769f5dcac6ba179fbb3",
+      "digest": "sha256:34fd4b3f5ad72250a371de53b370fbeb018f4aabcbffea81282fae3291929c52",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCICAQZIJQydV0EygtDb+cpcPThkU5GqkTTkYz/hTWasP6AiEArlJHDDoNaIIt6VEtsoN1hZkKHGsR6EzTW3l2J0CTAOU="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "custom-objects"
+        ]
+      },
+      "description": "The ACME operator of Norca (norca-acme of norca-platform) as one release: the ACL policy bound to its job and the job, which is the controller of the norca.io/CertificateIssuer objects that sign through an ACME certificate authority such as Let's Encrypt. It fulfils the certificate orders of the servers, answers the HTTP-01 challenge behind the edge router and proves names in DNS zones through norca-provider.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "namespace": "norca",
+  "name": "norca-dns",
+  "versions": [
+    {
+      "version": "0.3.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/norca-dns",
+      "tag": "norca-dns/v0.3.0",
+      "commit": "2fc40ab1a31a80b36c887edeedb4338d8c23f935",
+      "digest": "sha256:603e5260bf486d23b25604c3f2fa1e30baf929962b992e8b5bd294050cf60e00",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEQCIDczoHaPxVHA/BlDZ6MoZ5zl33ug/RaWwMKuTR8iuQAoAiAGdyIqq4mGUXIiVH2699sbkeiRROvrIzLggyDwYUcI+Q=="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "custom-objects"
+        ]
+      },
+      "description": "The DNS records operator of Norca (norca-dns of norca-platform) as one release: the norca.io/DNSRecord object kind, the ACL policy bound to its job and the job, which keeps the record sets of the DNSRecord objects (A, AAAA, CNAME, TXT; values given or taken from a LoadBalancer object) in the DNS zones of norca-provider that allow records, under the allow list of each namespace.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

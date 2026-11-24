@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "traefik",
+  "versions": [
+    {
+      "version": "0.3.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/traefik",
+      "tag": "traefik/v0.3.0",
+      "commit": "ddc5465ed107aa1dc378738e341fcbcf77bcd2f0",
+      "digest": "sha256:824bdb75b1a5fe8d22a258c90020bc3ff027605aa865e47e57390a0cb981908b",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIEOSVHCGxt8RMS6uv6MmNe6H/3HO5LC2asstKctqVTeMAiEAhsXJ5ESHgVLBp3ui+pqJpUxzD49F360tVA8SUA4naKQ="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0"
+      },
+      "description": "Traefik Proxy (MIT) as the edge router of a region: entrypoints for HTTP, HTTPS, TCP and UDP set from the install form, certificates from the secret store, routes from the tags of the services in Norca's native catalog and from static file configuration (web, WebSocket, gRPC, TCP).",
+      "listed": "2026-11-24"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "namespace": "norca",
+  "name": "norca-provider",
+  "versions": [
+    {
+      "version": "0.5.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/norca-provider",
+      "tag": "norca-provider/v0.5.0",
+      "commit": "b75031fb1ecc41d89590102d44c58044b073aac9",
+      "digest": "sha256:500a7eb36b8b820667be1f6de30d89ec2a016f1a43aea74408235a0995ed18b6",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIHYBu++qUEuCZMmHYtwN4293BqtwIUXSpLyNMALbuEkWAiEAvvaZtT4w7A/GHRtfSZB8R1rge9VHafFs+vbUIC3t3os="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "custom-objects"
+        ]
+      },
+      "description": "The provider application of Norca (norca-provider of norca-platform) as one release: the ACL policy bound to its job and the job, which serves the node providers of the node scaling operator, the load balancer classes of the LoadBalancer operator and the DNS zones of norca-acme its configuration names, and registers them as NodeProvider, LoadBalancerClass and DNSZone objects; and the norca.io/DNSZone object kind.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

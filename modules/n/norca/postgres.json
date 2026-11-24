@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "postgres",
+  "versions": [
+    {
+      "version": "0.4.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/postgres",
+      "tag": "postgres/v0.4.0",
+      "commit": "742b0237f492c051a97c3baf846c712b8ef703a6",
+      "digest": "sha256:0aeda034287b845acaa7af2702c7b5dd1dc3441be061929fb13e1ddc6dea1e12",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIG0B3rOz5Q5vlKklxA3NKNOki/Gog6HA39LE0j6/FDsZAiEA0pvzmbrWJ4BN6Du/N7OEoqPlmT1NJpixkus7oo62gR8="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "A single PostgreSQL server (PostgreSQL License, official image, referenced, never shipped): data on a host volume, superuser, application databases and a pg_monitor user from the built-in secret store, health checks with roles, optional TLS with Norca's workload certificates, optional periodic pg_dumpall to S3 (RustFS).",
+      "listed": "2026-11-24"
+    }
+  ]
+}

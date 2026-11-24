@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "seaweedfs-csi",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/seaweedfs-csi",
+      "tag": "seaweedfs-csi/v0.1.0",
+      "commit": "4f743bbd829058853fa867a072a63d094df2a3cc",
+      "digest": "sha256:4859201fb529309da1045278296f5d63171d771ed6b5ad28bb95bfe968f57475",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEYCIQC7YLlviNoNUktYXHtHxxGp5jX9AIw9F3kscpv7F5pmVgIhAOK2VSsdXyAs0RmzSHF+44w5WQa2+QkYQwZcfgLrtDKA"
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0"
+      },
+      "description": "The SeaweedFS CSI driver (Apache-2.0, binaries referenced, never shipped) on every node with raw_exec: the mount service (weed mount, FUSE) and the driver as a monolith CSI plugin (controller and node) with volume statistics and conditions, the filer found in the native catalog.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

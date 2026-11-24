@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "otel-collector",
+  "versions": [
+    {
+      "version": "0.1.2",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/otel-collector",
+      "tag": "otel-collector/v0.1.2",
+      "commit": "cab3bd4232d8564fd3ac0db71d9ed98a9b493fb9",
+      "digest": "sha256:b046fe882828eabd292b71d70a7069796a58d4e6dbe625d5b49ad2db6b0a888d",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIQDlvIvzJRFw7KnhJcmBf/Mlv/EBCYC5lQJgQZLBwS6J8QIgcveKKdIyVyS/BU3NvJEXSn/T+zeGYY8V4E8ClofEIt4="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "The OpenTelemetry Collector (contrib, Apache-2.0) on every node as a system job: host metrics, the metrics of the Norca agent, NATS, Forgejo, the mTLS gateway, Consul and PostgreSQL found through the native catalog, an OTLP receiver for the applications on the node, everything exported to OpenObserve with the ingest credentials of the secret store over TLS trusting Norca's CA.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

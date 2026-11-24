@@ -1,0 +1,44 @@
+{
+  "namespace": "norca",
+  "name": "postgres-demo",
+  "versions": [
+    {
+      "version": "0.3.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/postgres-demo",
+      "tag": "postgres-demo/v0.3.1",
+      "commit": "47a138422d81ac6c956e3d8c0794ae1ba0af45cf",
+      "digest": "sha256:7a000aefc7c024cd33384269b5216e7e83011c22f539087202fbc396a523700f",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIF4dmgc6G0VwtG4mApCODINV9BPxfg7QcYfJnaeux/rkAiEAzb9b1/mqtuegVOPV6H9ou+SWnx47Mogk68xyOXeScf8="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "secret-store"
+        ],
+        "modules": [
+          {
+            "name": "s3",
+            "source": "example/rustfs",
+            "version": ">= 0.2.0"
+          }
+        ]
+      },
+      "description": "A single PostgreSQL server: data on a host volume, application databases created by a hook, credentials from the secret store, optional periodic dumps to an S3 store.",
+      "category": "database",
+      "keywords": [
+        "postgres",
+        "postgresql",
+        "sql",
+        "database"
+      ],
+      "license": "PostgreSQL",
+      "listed": "2026-11-24"
+    }
+  ]
+}

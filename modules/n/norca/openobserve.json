@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "openobserve",
+  "versions": [
+    {
+      "version": "0.2.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/openobserve",
+      "tag": "openobserve/v0.2.1",
+      "commit": "3699cb1b9ba7301bc2d128f45cf0b99908ec2ef0",
+      "digest": "sha256:22d781d2ba5a79c3d8743f35997981c5e6907a2c4f1da6bb6003c4f77fee08ce",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIDn39mnl1hgFBZYPRP3WBNRNeuuF5JenVaRBbSCy68AxAiEA8bJAg0U2qRe2102iGFjLV2fgXCBf5ZctpAnF95k6ZiU="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "OpenObserve (AGPL-3.0, referenced, never shipped) as the observability backend (logs, metrics, traces) of a Norca cluster: a single node on a host volume (SQLite) or a cluster with router, ingester, querier, compactor and alertmanager groups (PostgreSQL, NATS, RustFS), TLS with Norca's workload certificates, root user from the built-in secret store, an ingest service account for the collectors.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

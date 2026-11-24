@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "mtls-gateway",
+  "versions": [
+    {
+      "version": "0.2.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/mtls-gateway",
+      "tag": "mtls-gateway/v0.2.1",
+      "commit": "f6f51b2d976bf8a0b18e78e5ac09969ccb9870c0",
+      "digest": "sha256:2537c96728d3efe4c58c1c508907e5dc02025a7577531e4df1c0d523a53843a4",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIBkWG/OeZk3S8n6LNN0V9HyUClfZG+FdbIph/V5AiU4yAiEAqfpIDB4fQvN5t9HmbAd5U987g3jM+YtgHF/vGbBZkfU="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "The cross-region native mTLS gateway of a Norca region (mtls { mode = \"gateway\" }): an SNI passthrough Envoy on every node of the region, injected by the servers or defined by the pack.",
+      "listed": "2026-11-24"
+    }
+  ]
+}

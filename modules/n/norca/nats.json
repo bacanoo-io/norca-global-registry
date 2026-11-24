@@ -1,0 +1,25 @@
+{
+  "namespace": "norca",
+  "name": "nats",
+  "versions": [
+    {
+      "version": "2.0.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/nats",
+      "tag": "nats/v2.0.0",
+      "commit": "f8881348a699853ab5353125e6fe380aa6fbf26d",
+      "digest": "sha256:19ed6ee98dbe09e2bd98082098fda4dcb5297390ad4e47679a14acd76b0919b3",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEQCIBa3B3B1d5lcGwgH3CxCd7PBpHqR1dlrY85YrHgN6FHnAiBFuKKMJKUDTAge3RTa714ViL6PtfalwcH6byBxHeKTUg=="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "A NATS cluster per Norca region (JetStream, supercluster gateways, TLS and client auth from Variables, or users in accounts with passwords from the built-in secret store).",
+      "listed": "2026-11-24"
+    }
+  ]
+}
