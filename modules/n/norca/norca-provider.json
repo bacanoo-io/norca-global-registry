@@ -24,6 +24,29 @@
       },
       "description": "The provider application of Norca (norca-provider of norca-platform) as one release: the ACL policy bound to its job and the job, which serves the node providers of the node scaling operator, the load balancer classes of the LoadBalancer operator and the DNS zones of norca-acme its configuration names, and registers them as NodeProvider, LoadBalancerClass and DNSZone objects; and the norca.io/DNSZone object kind.",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.5.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/norca-provider",
+      "tag": "norca-provider/v0.5.1",
+      "commit": "203c7ef0536f005dad75cabd1137673db1d4c9c4",
+      "digest": "sha256:72934ce961f91ecaa76545d0818f77f619f6182197c7efaffe652718e0cd1c71",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEQCIF6bQ363wTHkDlFprHK4VV6CMN4IbTzwlV7+oabenw+UAiBqIGp3q7GUi+qrv+Q02Z7LiHz+jESrjnWrnukdkAmHVA=="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "custom-objects"
+        ]
+      },
+      "description": "The provider application of Norca (norca-provider of norca-platform) as one release: the ACL policy bound to its job and the job, which serves the node providers of the node scaling operator, the load balancer classes of the LoadBalancer operator and the DNS zones of norca-acme its configuration names, and registers them as NodeProvider, LoadBalancerClass and DNSZone objects; and the norca.io/DNSZone object kind.",
+      "listed": "2026-11-25"
     }
   ]
 }

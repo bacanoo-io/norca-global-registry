@@ -24,6 +24,29 @@
       },
       "description": "The node scaling operator of Norca (norca-nodescaler of norca-platform) as one release: the ACL policy bound to its job and the job, two instances on different nodes, never on a node the operator created. The kinds NodeGroup and NodeProvider are registered by the core.",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.11.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/nodescaler-operator",
+      "tag": "nodescaler-operator/v0.11.1",
+      "commit": "6f8da98ee8ec02e525b326eb54a113d125cdfff6",
+      "digest": "sha256:eaf891ab31eff3cec3d2935340d32989543f9016c3afd5fe7c76535e6c685a39",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEQCICvgMSdb73Ezm05tni5olMNGUxjWVPKk6wdM12nhNqMyAiA5m/nELbAZXi7lsOszVQLUjGRfXKGTmpVwrP8OmsAyTw=="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0",
+        "features": [
+          "releases",
+          "custom-objects"
+        ]
+      },
+      "description": "The node scaling operator of Norca (norca-nodescaler of norca-platform) as one release: the ACL policy bound to its job and the job, two instances on different nodes, never on a node the operator created. The kinds NodeGroup and NodeProvider are registered by the core.",
+      "listed": "2026-11-25"
     }
   ]
 }

@@ -20,6 +20,25 @@
       },
       "description": "OpenObserve (AGPL-3.0, referenced, never shipped) as the observability backend (logs, metrics, traces) of a Norca cluster: a single node on a host volume (SQLite) or a cluster with router, ingester, querier, compactor and alertmanager groups (PostgreSQL, NATS, RustFS), TLS with Norca's workload certificates, root user from the built-in secret store, an ingest service account for the collectors.",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.2.2",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/openobserve",
+      "tag": "openobserve/v0.2.2",
+      "commit": "919b1b064c0ac0821a391b57d4d94b06cf095acf",
+      "digest": "sha256:a5c698a8633b490047cf0963e1867536a81b18b29def853dfe4468dfc21f6873",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEYCIQDFXzn9BBdlNdFlKaCAYKdt8CxRnla3Pnvf5AV4d2FbkQIhAPXUEPdLiE+qv31mO6Rqc5jv0DpbMUVdj9y/uLwhFal6"
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "OpenObserve (AGPL-3.0, referenced, never shipped) as the observability backend (logs, metrics, traces) of a Norca cluster: a single node on a host volume (SQLite) or a cluster with router, ingester, querier, compactor and alertmanager groups (PostgreSQL, NATS, RustFS), TLS with Norca's workload certificates, root user from the built-in secret store, an ingest service account for the collectors.",
+      "listed": "2026-11-25"
     }
   ]
 }

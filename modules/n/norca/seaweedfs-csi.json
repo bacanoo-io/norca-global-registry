@@ -20,6 +20,25 @@
       },
       "description": "The SeaweedFS CSI driver (Apache-2.0, binaries referenced, never shipped) on every node with raw_exec: the mount service (weed mount, FUSE) and the driver as a monolith CSI plugin (controller and node) with volume statistics and conditions, the filer found in the native catalog.",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.1.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/seaweedfs-csi",
+      "tag": "seaweedfs-csi/v0.1.1",
+      "commit": "7ee47a616f682e8e490878a34718982b3f6a9793",
+      "digest": "sha256:628a60397fa67b67f3dc8f0c465a6cdbf7b4362ce26396a18934f0c0ef4c2df8",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEQCICGsjEg6eF7E9AjivTcgO3F81h9oSqCmX2fjrFu7zOjOAiAFV+jeGf1ih7e63i0mS0ngRV24i/kABF/3Tp8PUxa9KQ=="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.3.0"
+      },
+      "description": "The SeaweedFS CSI driver (Apache-2.0, binaries referenced, never shipped) on every node with raw_exec: the mount service (weed mount, FUSE) and the driver as a monolith CSI plugin (controller and node) with volume statistics and conditions, the filer found in the native catalog.",
+      "listed": "2026-11-25"
     }
   ]
 }

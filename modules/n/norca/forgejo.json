@@ -20,6 +20,25 @@
       },
       "description": "Forgejo (GPL-3.0-or-later, referenced, never shipped) as the internal git server and container (OCI) registry of a Norca cluster: SQLite and the repositories on a host volume, packages, LFS and attachments in RustFS, secrets from the built-in secret store, optional HTTPS, SSH, initial admin and periodic dumps.",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.2.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/forgejo",
+      "tag": "forgejo/v0.2.1",
+      "commit": "26191910e3b599177d29bdefa7616d7a38113518",
+      "digest": "sha256:f935ab9a8277be2210920beb90f51ddf7eb2e7a0e1cb0c55a157431671de79ac",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEQCICW/vFnfsdAmquPwiM+SXHerJVCagiWHdo9CgYPGe73mAiAeN7rGxTtCj59zIevtqvPd+vb9OwkewLdXX66kbQpAhQ=="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "Forgejo (GPL-3.0-or-later, referenced, never shipped) as the internal git server and container (OCI) registry of a Norca cluster: SQLite and the repositories on a host volume, packages, LFS and attachments in RustFS, secrets from the built-in secret store, optional HTTPS, SSH, initial admin and periodic dumps.",
+      "listed": "2026-11-25"
     }
   ]
 }

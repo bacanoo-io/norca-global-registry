@@ -20,6 +20,25 @@
       },
       "description": "RustFS (Apache-2.0), an S3-compatible object store, as the backup store of Norca: single node or distributed, credentials from the built-in secret store, data on host volumes, health checks with roles, optional bucket creation.",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.2.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/rustfs",
+      "tag": "rustfs/v0.2.1",
+      "commit": "e97667c0981c2a275bd88183da6a451aa7416b06",
+      "digest": "sha256:21f9a50a4049c0eeb05b60a747466b72c7573090b30da34b9175cd35a14ffc02",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIG4jMDxOY1COkbjW2/IgGtbN4Bde46EOAj8z3vUOpUFRAiEAhlbDw1SYSAhhxerQ1bvx3kL/JZsgaATiHt9pPuH0vKk="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "RustFS (Apache-2.0), an S3-compatible object store, as the backup store of Norca: single node or distributed, credentials from the built-in secret store, data on host volumes, health checks with roles, optional bucket creation.",
+      "listed": "2026-11-25"
     }
   ]
 }

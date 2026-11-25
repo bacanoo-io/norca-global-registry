@@ -20,6 +20,25 @@
       },
       "description": "A single PostgreSQL server (PostgreSQL License, official image, referenced, never shipped): data on a host volume, superuser, application databases and a pg_monitor user from the built-in secret store, health checks with roles, optional TLS with Norca's workload certificates, optional periodic pg_dumpall to S3 (RustFS).",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.4.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/postgres",
+      "tag": "postgres/v0.4.1",
+      "commit": "0cdd14b6cf2a595aa68367b1d60fe10bac83b7cf",
+      "digest": "sha256:15a87e48d43888b8ba112bd622c31caeb4cc0a3bb198e8dd8380a098b484ef95",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEYCIQCpG4mWeJvu8WupUu9uoFm4OjKvLAOCtWkUl5IZI+cgfQIhAMzVCo+7XMvgoNQ++LTnmWTpwDNdKEs+8hQ4Ux7W1PMr"
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "A single PostgreSQL server (PostgreSQL License, official image, referenced, never shipped): data on a host volume, superuser, application databases and a pg_monitor user from the built-in secret store, health checks with roles, optional TLS with Norca's workload certificates, optional periodic pg_dumpall to S3 (RustFS).",
+      "listed": "2026-11-25"
     }
   ]
 }

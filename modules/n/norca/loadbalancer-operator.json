@@ -27,6 +27,32 @@
       },
       "description": "The LoadBalancer operator of Norca as one release: the norca.io/LoadBalancer object kind (with its optional webhooks and limits), the norca.io/LoadBalancerClass kind of the providers, the ACL policy of the controller, an admission policy for service marks and the controller job.",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.5.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/loadbalancer-operator",
+      "tag": "loadbalancer-operator/v0.5.1",
+      "commit": "ecf29550024fd27ce5a1b3f6cb50ac5f998042a3",
+      "digest": "sha256:7d9c98eff071768112ea20af09d5aa515534e626028b7a501ee0387bcde165ce",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIANlypLivV+BUcutHq6ameKVu7T+8GLwqN4htVdCeg+DAiEA9f7T3g+2KPDI7r88dg60v4skI7uTuIB2TF64JgxP8K4="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0",
+        "features": [
+          "releases",
+          "custom-objects",
+          "admission-cel",
+          "object-webhooks",
+          "object-limits"
+        ]
+      },
+      "description": "The LoadBalancer operator of Norca as one release: the norca.io/LoadBalancer object kind (with its optional webhooks and limits), the norca.io/LoadBalancerClass kind of the providers, the ACL policy of the controller, an admission policy for service marks and the controller job.",
+      "listed": "2026-11-25"
     }
   ]
 }
