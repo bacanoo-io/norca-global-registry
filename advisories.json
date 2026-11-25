@@ -1,3 +1,12 @@
 {
-  "advisories": []
+  "advisories": [
+    {
+      "kind": "module",
+      "namespace": "norca",
+      "name": "redis",
+      "version": "0.4.0",
+      "level": "warning",
+      "reason": "The server does not start: the configuration file reads its port from NOMAD_PORT_db, which no task of Norca has, so Redis ends with a configuration error. Use 0.4.1, which reads NORCA_PORT_db."
+    }
+  ]
 }
