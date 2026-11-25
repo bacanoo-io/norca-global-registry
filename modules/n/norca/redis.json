@@ -30,6 +30,35 @@
       ],
       "license": "BSD-3-Clause",
       "listed": "2026-11-24"
+    },
+    {
+      "version": "0.4.1",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/redis",
+      "tag": "redis/v0.4.1",
+      "commit": "46a83440d526a1e123493b4e73b049cb76db8938",
+      "digest": "sha256:a3349212de8fa90b6e70472dceaa6bb2b5852c620ebfb9ed01948f7d12bef6de",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEQCIH6nL/NcvR5Oucawy5v/04krSIpGljlxHEJsY2feQv9xAiBKl7MIIpheFAJmAqA4JPAOYPNpu6GHn0OkMN6M7qHBGg=="
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0",
+        "features": [
+          "releases",
+          "secret-store"
+        ]
+      },
+      "description": "One Redis server: a service in the catalog, a password from a Norca Variable that the server requires, optional persistence on a host volume.",
+      "category": "database",
+      "keywords": [
+        "redis",
+        "cache"
+      ],
+      "license": "BSD-3-Clause",
+      "listed": "2026-11-25"
     }
   ]
 }
