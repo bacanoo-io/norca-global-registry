@@ -33,6 +33,22 @@
       ],
       "description": "Installs and manages the official HashiCorp Consul release (BSL 1.1, not distributed by Norca): servers on host volumes spread over datacenters, a client agent per node, gossip key, TLS and ACL bootstrap from Variables, optional snapshots to S3.",
       "listed": "2026-11-25"
+    },
+    {
+      "version": "0.2.2",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/consul",
+      "tag": "consul/v0.2.2",
+      "commit": "b31ff1ed0ad9e46e342189e8c474d07f547b7aff",
+      "digest": "sha256:6015172055df29be0ad66160dff0a7dbee3bced2f5df8394111dffe406799c75",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEUCIAkSb+O8WJ95ohA/xfIg7aM4jSAwTuh6bY3afHYyXiWYAiEA97ayFmWOhxujvCD28C4ApHmHdWmVjnSe9RsMsBtj5pU="
+        }
+      ],
+      "description": "Installs and manages the official HashiCorp Consul release (BSL 1.1, not distributed by Norca): servers on host volumes spread over datacenters, a client agent per node, gossip key, TLS and ACL bootstrap from Variables, optional snapshots to S3.",
+      "listed": "2026-11-25"
     }
   ]
 }
