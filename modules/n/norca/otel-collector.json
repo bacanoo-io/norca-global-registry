@@ -39,6 +39,25 @@
       },
       "description": "The OpenTelemetry Collector (contrib, Apache-2.0) on every node as a system job: host metrics, the metrics of the Norca agent, NATS, Forgejo, the mTLS gateway, Consul and PostgreSQL found through the native catalog, an OTLP receiver for the applications on the node, everything exported to OpenObserve with the ingest credentials of the secret store over TLS trusting Norca's CA.",
       "listed": "2026-11-25"
+    },
+    {
+      "version": "0.2.0",
+      "repository": "github.com/bacanoo-io/norca-registry",
+      "path": "modules/otel-collector",
+      "tag": "otel-collector/v0.2.0",
+      "commit": "577cc75148e1955eb84de9e84ad075f3bfc9e4d2",
+      "digest": "sha256:ba57a4e7b81089f73e101eac6bf805a8ec94c0221ad804c11d4325d4178f065d",
+      "signatures": [
+        {
+          "key_id": "sha256:7a9dfce752f704d1ccc495558225d9e06adafe614a10bd08613f18611876e6c0",
+          "signature": "MEYCIQC6gQb/reMO5IKDrk+uQRbbL4LKZS5e90fH1iyegm09XgIhALgISO8IVftvCy0VJ6A8KPp4zS5hGOZRKYpX2FwPOD3o"
+        }
+      ],
+      "requires": {
+        "norca": ">= 0.1.0"
+      },
+      "description": "The OpenTelemetry Collector (contrib, Apache-2.0) on every node as a system job: host metrics, the metrics of the Norca agent (scraped, or pushed over OTLP to 127.0.0.1), NATS, Forgejo, the mTLS gateway, Consul and PostgreSQL found through the native catalog, an OTLP receiver for the applications on the node, everything exported to OpenObserve with the ingest credentials of the secret store over TLS trusting Norca's CA.",
+      "listed": "2026-11-27"
     }
   ]
 }
